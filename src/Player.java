@@ -87,7 +87,6 @@ public class Player {
         System.out.println("3- Knight \t Damage : 8 \t Health :24 \t Money :15");
         System.out.print("Enter your choice : ");
         int chaID = scan.nextInt();
-
         while (chaID < 1 || chaID > 3) {
             System.out.print("Please enter a valid input :");
             chaID = scan.nextInt();
@@ -103,36 +102,36 @@ public class Player {
         switch (charMenu()) {
             case 1:
                 System.out.println();
-                System.out.println("samuray karakterini seçtiniz ...");
-                this.name = "samuray " + getName();
+                System.out.println("You have chosen the samurai character. ...");
+                this.name = "Samurai " + getName();
                 this.damage = 5;
                 this.rHealthy = 21;
                 this.healthy = 21;
                 this.money = 25;
-                System.out.println("Hasar :" + this.damage + " Sağlık :" + this.healthy + " Altın :" + this.money);
+                System.out.println("Damage :" + this.damage + " Health :" + this.healthy + " Gold :" + this.money);
                 break;
             case 2:
                 System.out.println();
-                System.out.println("okçu karakterini seçtiniz ...");
-                this.name = "okçu " + getName();
+                System.out.println("You have chosen the archer character. ...");
+                this.name = "archer " + getName();
                 this.damage = 7;
                 this.healthy = 18;
                 this.rHealthy = 18;
                 this.money = 30;
-                System.out.println("Hasar :" + this.damage + " Sağlık :" + this.healthy + " Altın :" + this.money);
+                System.out.println("Damage :" + this.damage + " Health :" + this.healthy + " Gold :" + this.money);
                 break;
             case 3:
                 System.out.println();
-                System.out.println("şovalye karakterini seçtiniz ...");
-                this.name = "şovalye " + getName();
+                System.out.println("You have chosen the knight character. ...");
+                this.name = "knight " + getName();
                 this.damage = 8;
                 this.healthy = 24;
                 this.rHealthy = 24;
                 this.money = 15;
-                System.out.println("Hasar :" + this.damage + " Sağlık :" + this.healthy + " Altın :" + this.money);
+                System.out.println("Damage :" + this.damage + " Health :" + this.healthy + " Gold :" + this.money);
                 break;
             default:
-                System.out.println("hatalı giriş ...!");
+                System.out.println("Wrong choice. ...!");
         }
     }
 }

@@ -8,19 +8,19 @@ public class Game {
 
         String selectName;
         Scanner scan = new Scanner(System.in);
-        System.out.println("****************OYUN BAŞLADI****************");
+        System.out.println("****************ADVENTURE GAME****************");
         System.out.println();
         System.out.println("Enter your nickname: ");
         selectName = scan.nextLine();
         Player player = new Player(selectName);
         player.selectChar();
-        System.out.println("HOŞ GELDİN " + player.getName());
+        System.out.println("WELCOME " + player.getName());
         while (true) {
             System.out.println();
             System.out.println("Choose a location : ");
             System.out.println();
             System.out.println("1. Safe House --> Your safe place, no enemies !");
-            System.out.println("2. Tool Store --> (altının yoksa deneme)");
+            System.out.println("2. Tool Store --> (if you don't have any gold, don't try)");
             System.out.println("3. Forest --> You may see a Vampire  !");
             System.out.println("4. Cave --> You may see a Zombie");
             System.out.println("5. River--> you may see a Bear");
@@ -47,14 +47,14 @@ public class Game {
                 case 4:
                     if (!player.getInventory().isFood())
                         location = new Cave(player);
-                    else{
-                    System.out.println("You cannot enter that area again! ");
-                }
-                break;
+                    else {
+                        System.out.println("You cannot enter that area again! ");
+                    }
+                    break;
                 case 5:
-                    if(!player.getInventory().isWater())
+                    if (!player.getInventory().isWater())
                         location = new River(player);
-                    else{
+                    else {
                         System.out.println("You cannot enter that area again! ");
                     }
                     break;
@@ -67,7 +67,7 @@ public class Game {
             }
             if (location.getClass().getName().equals("SafeHouse")) {
                 if (player.getInventory().isFirewood() && player.getInventory().isFood() && player.getInventory().isWater()) {
-                    System.out.println("TEBRİKLER KAZANDINIZ");
+                    System.out.println("CONGRATULATIONS ON YOUR WIN.");
                     break;
                 }
             }

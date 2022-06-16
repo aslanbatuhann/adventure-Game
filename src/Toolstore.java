@@ -32,12 +32,12 @@ public class Toolstore extends NormalLoc {
 
     public int armorMenu() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("ZIRHLAR");
-        System.out.println("Hafif Zırh  1 ---> HASAR : 2 --- PARA : 25");
-        System.out.println("Orta Zırh   2 ---> HASAR : 3 --- PARA : 35");
-        System.out.println("Ağır Zırh   3 ---> HASAR : 7 --- PARA : 45");
-        System.out.println("GERİ 4");
-        System.out.println("seciminiz ");
+        System.out.println("ARMORS");
+        System.out.println("Light Armor  1 ---> DEFENCE : 2 --- GOLD : 25");
+        System.out.println("Medium Armor   2 ---> DEFENCE : 3 --- GOLD : 35");
+        System.out.println("Heavy Armor   3 ---> DEFENCE : 7 --- GOLD : 45");
+        System.out.println("BACK 4");
+        System.out.println("YOUR CHOICE: ");
         return scan.nextInt();
     }
 
@@ -48,17 +48,17 @@ public class Toolstore extends NormalLoc {
         switch (itemNum) {
             case 1:
                 avoid = 1;
-                aName = "Light Armour";
+                aName = "Light Armor";
                 price = 15;
                 break;
             case 2:
                 avoid = 3;
-                aName = "Medium Armour";
+                aName = "Medium Armor";
                 price = 25;
                 break;
             case 3:
                 avoid = 5;
-                aName = "Heavy Armour";
+                aName = "Heavy Armor";
                 price = 40;
                 break;
             case 4:
@@ -83,12 +83,12 @@ public class Toolstore extends NormalLoc {
 
     public int weaponMenu() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("SİLAHLAR");
-        System.out.println("Tabanca     1 ---> HASAR : 2 --- PARA : 15");
-        System.out.println("Kılıç       2 ---> HASAR : 2 --- PARA : 25");
-        System.out.println("Tüfek       3 ---> HASAR : 2 --- PARA : 40");
-        System.out.println("GERİ 4");
-        System.out.println("seciminiz ");
+        System.out.println("WEAPONS");
+        System.out.println("Gun         1 ---> DAMAGE : 2 --- GOLD : 25");
+        System.out.println("Sword       2 ---> DAMAGE : 3 --- GOLD : 35");
+        System.out.println("Rifle       3 ---> DAMAGE : 2 --- GOLD : 45");
+        System.out.println("BACK 4");
+        System.out.println("YOUR CHOICE: ");
 
         return scan.nextInt();
     }

@@ -1,6 +1,6 @@
-public class Forest extends BattleLoc{
+public class Forest extends BattleLoc {
 
     Forest(Player player) {
-        super(player,"BALTA GİRMEMİŞ ORMAN",new Vampire(),"Firewood");
+        super(player, "the hidden forest.", new Vampire(), "Firewood");
     }
 }
